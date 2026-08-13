@@ -21,11 +21,7 @@ As I continue developing the lab, I will document different attack simulations a
 
 ### Current Architecture
 
-Windows 11 Endpoint (`SOC-Windows-01`)
-        │
-        │ Wazuh Agent
-        ▼
-Ubuntu Wazuh Server
-        │
-        ▼
-Wazuh Dashboard
+```mermaid
+flowchart LR
+    A["Windows 11<br>SOC-Windows-01"] -->|Wazuh Agent| B["Ubuntu Server<br>Wazuh"]
+    B --> C["Wazuh Dashboard"]
