@@ -19,12 +19,13 @@ As I continue developing the lab, I will document different attack simulations a
 | Wazuh Agent | Sends endpoint telemetry to the Wazuh server |
 | Windows Event Logs | Source of Windows security telemetry |
 
-### Current Architecture
+## Current Architecture
 
 ```mermaid
 flowchart LR
     A["Windows 11<br>SOC-Windows-01"] -->|Wazuh Agent| B["Ubuntu Server<br>Wazuh"]
     B --> C["Wazuh Dashboard"]
+```
 
 ## 🔎 SOC Investigations
 
