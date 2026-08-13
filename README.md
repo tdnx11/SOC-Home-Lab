@@ -32,6 +32,7 @@ flowchart LR
 | Investigation | Detection | Skills Demonstrated |
 |---|---|---|
 | [Failed Authentication Investigation](investigations/01-failed-authentication.md) | Windows Event ID 4625 / Wazuh Rule 60122 | Alert triage, Windows log analysis, authentication analysis |
+| [Brute Force Detection & Account Lockout](investigations/02-brute-force-detection.md) | Wazuh Rule 60204 / Windows Event 4625 & 4740 | Brute-force detection, event correlation, MITRE ATT&CK |
 
 ## 🛠️ Skills Practiced
 
