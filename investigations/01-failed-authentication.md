@@ -19,7 +19,8 @@ Wazuh generated alerts for:
 - **Rule Level:** 5
 - **Windows Event ID:** 4625
 
-![Wazuh Authentication Alerts](../screenshots/failed-authentication/wazuh-alerts.png)
+![Wazuh authentication failure alerts](../screenshots/failed-authentication/wazuh-alerts.png)
+![Windows Event ID 4625 details](../screenshots/failed-authentication/event-4625-details.png)
 
 ## Investigation
 
