@@ -25,23 +25,44 @@ analyze telemetry, and document investigations using SOC analyst workflows.
 
 `SOC-LAB.local`
 
-### Current Architecture
+## 🏗️ Current Architecture
 
-SOC-DC01 (Windows Server 2022)
-        │
-        │ Active Directory / Group Policy
-        ▼
-SOC-Windows-01 (Windows 11)
-        │
-        │ Windows Security Events
-        ▼
-Wazuh Agent
-        │
-        ▼
-Wazuh Server
-        │
-        ▼
-Wazuh Dashboard
+The lab simulates a small enterprise environment with centralized identity management, security policy enforcement, endpoint monitoring, and SIEM-based log analysis.
+
+```text
+                    SOC-LAB.local
+                         │
+                ┌────────▼────────┐
+                │    SOC-DC01     │
+                │ Windows Server  │
+                │      2022       │
+                │                 │
+                │ Active Directory│
+                │ DNS             │
+                │ Group Policy    │
+                └────────┬────────┘
+                         │
+                  Domain / GPO
+                         │
+                ┌────────▼────────┐
+                │ SOC-Windows-01  │
+                │   Windows 11    │
+                │                 │
+                │ Domain Joined   │
+                │ Security Logs   │
+                │ Wazuh Agent     │
+                └────────┬────────┘
+                         │
+                  Security Events
+                         │
+                ┌────────▼────────┐
+                │  Wazuh Server   │
+                │  Ubuntu Server  │
+                │                 │
+                │ Wazuh Manager   │
+                │ Wazuh Indexer   │
+                │ Wazuh Dashboard │
+                └─────────────────┘
 
 ---
 ## 🔎 SOC Investigations
