@@ -50,7 +50,7 @@ Hands-on investigations performed in my SOC home lab using Windows security tele
 
 | Investigation | Description | Key Skills |
 |---|---|---|
-| 🔐 [Failed Authentication](investigations/failed-authentication.md) | Investigated unsuccessful Windows login attempts and analyzed authentication events in Wazuh. | Windows Event Logs, Authentication Analysis, Wazuh, Alert Triage |
+| 🔐 [Failed Authentication](01-failed-authentication.md) | Investigated unsuccessful Windows login attempts and analyzed authentication events in Wazuh. | Windows Event Logs, Authentication Analysis, Wazuh, Alert Triage |
 | 🚨 [Brute-Force Attack](investigations/brute-force.md) | Simulated repeated authentication failures and analyzed the resulting activity to identify brute-force behavior. | Wazuh, Log Analysis, Threat Detection, Authentication Monitoring |
 | 🔎 [Windows Process Creation & Account Discovery](investigations/03-Windows-Process-Creation-Investigation.md) | Configured Event ID 4688 auditing and command-line logging, then investigated `net user` account discovery activity in Wazuh. | Event ID 4688, Process Analysis, Command-Line Analysis, Group Policy, Threat Hunting |
 
