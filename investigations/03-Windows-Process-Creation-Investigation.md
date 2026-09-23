@@ -54,7 +54,7 @@ The policy was configured to audit successful process creation events.
 
 ### Screenshot - Process Creation Auditing
 
-![Process Creation Auditing](../screenshots/process-creation-gpo.png)
+![Process Creation Auditing](../screenshots/process-creation/process-creation-gpo.png)
 
 *Figure 1: Group Policy configured to audit successful process creation events.*
 
@@ -117,7 +117,7 @@ Wazuh generated an alert with the following information:
 
 ### Screenshot - Wazuh Process Creation Alert
 
-![Wazuh Process Creation Alert](../screenshots/wazuh-4688-alert.png)
+![Wazuh 4688 Alert](../screenshots/process-creation/wazuh-4688-alert.png)
 
 *Figure 2: Wazuh receiving Windows Event ID 4688 process creation telemetry
 from SOC-Windows-01.*
@@ -141,7 +141,7 @@ The event contained:
 
 ### Screenshot - Command-Line Evidence
 
-![Net User Command Line](../screenshots/net-user-commandline.png)
+![Net User Command Line](../screenshots/process-creation/net-user-commandline.png)
 
 *Figure 3: Wazuh event details showing net.exe spawning net1.exe with the
 `user` argument.*
