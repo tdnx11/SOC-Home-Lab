@@ -44,79 +44,17 @@ Wazuh Server
 Wazuh Dashboard
 
 ---
+## 🔎 SOC Investigations
 
-# 🔎 SOC Investigations
+Hands-on investigations performed in my SOC home lab using Windows security telemetry and Wazuh.
 
-The following investigations were performed in the lab to practice alert
-triage, log analysis, and security event investigation.
+| Investigation | Description | Key Skills |
+|---|---|---|
+| 🔐 [Failed Authentication](investigations/failed-authentication.md) | Investigated unsuccessful Windows login attempts and analyzed authentication events in Wazuh. | Windows Event Logs, Authentication Analysis, Wazuh, Alert Triage |
+| 🚨 [Brute-Force Attack](investigations/brute-force.md) | Simulated repeated authentication failures and analyzed the resulting activity to identify brute-force behavior. | Wazuh, Log Analysis, Threat Detection, Authentication Monitoring |
+| 🔎 [Windows Process Creation & Account Discovery](investigations/03-Windows-Process-Creation-Investigation.md) | Configured Event ID 4688 auditing and command-line logging, then investigated `net user` account discovery activity in Wazuh. | Event ID 4688, Process Analysis, Command-Line Analysis, Group Policy, Threat Hunting |
 
-## 1. Failed Authentication Investigation
-
-Analyzed failed Windows authentication activity and reviewed security events
-associated with unsuccessful login attempts.
-
-➡️ [View Investigation](investigations/failed-authentication.md)
-
-**Skills:** Windows Event Logs, Authentication Analysis, Wazuh, Alert Triage
-
----
-
-## 2. Brute-Force Investigation
-
-Simulated repeated authentication failures and analyzed the resulting security
-events in Wazuh to identify patterns consistent with brute-force activity.
-
-➡️ [View Investigation](investigations/brute-force.md)
-
-**Skills:** Wazuh, Log Analysis, Authentication Monitoring, Threat Detection
-
----
-
-## 3. Windows Process Creation & Account Discovery
-
-Configured Windows process creation auditing through Group Policy and enabled
-command-line logging.
-
-Executed `net user` on a domain workstation and investigated the resulting
-Windows Event ID 4688 activity in Wazuh.
-
-The investigation identified:
-
-- Process: `net1.exe`
-- Parent Process: `net.exe`
-- Command Line: `net1 user`
-- Windows Event ID: `4688`
-- Wazuh Rule ID: `67027`
-
-➡️ [View Investigation](investigations/03-Windows-Process-Creation-Investigation.md)
-
-**Skills:** Windows Event ID 4688, Process Analysis, Command-Line Analysis,
-Group Policy, Active Directory, Wazuh, Threat Hunting
-
----
-
-# ⚙️ Security Monitoring Configuration
-
-## Windows Process Creation Auditing
-
-Created the `SOC Security Auditing` Group Policy Object to enable successful
-process creation auditing across the lab.
-
-Configured:
-
-`Advanced Audit Policy → Detailed Tracking → Audit Process Creation → Success`
-
-Command-line logging was also enabled to provide additional context during
-process investigations.
-
-This allows Wazuh to capture information such as:
-
-- Executed process
-- Parent process
-- User account
-- Command-line arguments
-- Domain
-- Timestamp
+> Each investigation includes the detection process, supporting evidence, analysis, and final assessment.
 
 ---
 
